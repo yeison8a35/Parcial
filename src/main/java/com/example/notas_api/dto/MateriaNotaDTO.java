@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class MateriaNotaDTO {
     private String materia;
-    private String nota;
+    private double nota;
 }
