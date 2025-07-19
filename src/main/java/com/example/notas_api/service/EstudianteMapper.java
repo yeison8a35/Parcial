@@ -15,7 +15,7 @@ public class EstudianteMapper {
 
         List<MateriaNotaDTO> materiaDTOs = materias.stream().map(m -> {
             MateriaNotaDTO mat = new MateriaNotaDTO();
-            mat.setNombreMateria(m.getNombreMateria());
+            mat.setNombreMateria(m.getMateria());
             mat.setNota(m.getNota());
             return mat;
         }).collect(Collectors.toList());

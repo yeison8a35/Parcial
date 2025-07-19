@@ -1,5 +1,6 @@
 package com.example.notas_api.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
@@ -15,5 +16,7 @@ public class Estudiante {
     private String apellido;
 
     @OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<NotaMateria> materias;
+
 }

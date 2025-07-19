@@ -24,7 +24,7 @@ public class EstudianteService {
 
         List<NotaMateria> materias = input.getNotas().stream().map(notaDTO -> {
             NotaMateria nota = new NotaMateria();
-            nota.setNombreMateria(notaDTO.getNombreMateria());
+            nota.setMateria(notaDTO.getNombreMateria());
             nota.setNota(notaDTO.getNota());
             nota.setEstudiante(estudiante);
             return nota;

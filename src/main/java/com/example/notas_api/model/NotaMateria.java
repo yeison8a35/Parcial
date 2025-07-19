@@ -1,5 +1,6 @@
 package com.example.notas_api.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,10 +13,12 @@ public class NotaMateria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nombreMateria;
+    private String materia; //
     private Double nota;
 
     @ManyToOne
     @JoinColumn(name = "cedula_estudiante")
+    @JsonBackReference
     private Estudiante estudiante;
+
 }
